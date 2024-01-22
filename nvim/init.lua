@@ -94,9 +94,17 @@ require('vscode').setup{
     italic_comments = true
 }
 
+local vscode_theme = require('lualine.themes.vscode')
+
+vscode_theme.normal.b.bg = "#2f2f2f"
+vscode_theme.normal.c.bg = "#2f2f2f"
+
+vscode_theme.inactive.b.bg = "#2f2f2f"
+vscode_theme.inactive.c.bg = "#2f2f2f"
+
 require('lualine').setup{
     options = {
-        theme = 'vscode'
+        theme = vscode_theme
     }
 }
 

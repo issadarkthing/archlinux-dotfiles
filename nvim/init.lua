@@ -15,8 +15,9 @@ require('packer').startup(function(use)
 	}
 
 	-- theme
-	use 'issadarkthing/vim-rex'
-	use 'vim-airline/vim-airline'
+    use { 'Mofiqul/vscode.nvim' }
+	-- use 'issadarkthing/vim-rex'
+	-- use 'vim-airline/vim-airline'
 
 	-- auto completion
 	use {
@@ -69,13 +70,43 @@ require('packer').startup(function(use)
 
     -- note taking
     use 'vimwiki/vimwiki'
+
+    -- better typescript lsp
+    use {
+        "pmizio/typescript-tools.nvim",
+        requires = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+    }
+
+    -- typescript checker
+    use { "issadarkthing/tsc.nvim" }
+
+    -- status line
+    use {
+      'nvim-lualine/lualine.nvim',
+      requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
 end)
+
+require('tsc').setup{}
+
+require('vscode').setup{
+    transparent = true,
+    italic_comments = true
+}
+
+require('lualine').setup{
+    options = {
+        theme = 'vscode'
+    }
+}
+
+require('vscode').load()
 
 vim.g.mapleader = ","
 
-vim.cmd[[colorscheme rex]]
-vim.cmd[[let g:airline_theme = 'rex']]
-vim.cmd[[let g:airline_powerline_fonts = 1]]
+-- vim.cmd[[colorscheme rex]]
+-- vim.cmd[[let g:airline_theme = 'rex']]
+-- vim.cmd[[let g:airline_powerline_fonts = 1]]
 vim.cmd[[set number]]
 vim.cmd[[set nowrap]]
 vim.cmd[[set nohlsearch]]
@@ -103,4 +134,4 @@ vim.keymap.set('n', '<c-i>', '<c-i>zz')
 vim.keymap.set("n", "<c-w>v", "<c-w>v<c-w>l")
 vim.keymap.set("n", "<c-w>s", "<c-w>s<c-w>j")
 
-
+vim.opt.termguicolors = true

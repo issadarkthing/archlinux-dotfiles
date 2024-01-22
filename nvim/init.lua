@@ -16,8 +16,6 @@ require('packer').startup(function(use)
 
 	-- theme
     use { 'Mofiqul/vscode.nvim' }
-	-- use 'issadarkthing/vim-rex'
-	-- use 'vim-airline/vim-airline'
 
 	-- auto completion
 	use {
@@ -112,9 +110,6 @@ require('vscode').load()
 
 vim.g.mapleader = ","
 
--- vim.cmd[[colorscheme rex]]
--- vim.cmd[[let g:airline_theme = 'rex']]
--- vim.cmd[[let g:airline_powerline_fonts = 1]]
 vim.cmd[[set number]]
 vim.cmd[[set nowrap]]
 vim.cmd[[set nohlsearch]]

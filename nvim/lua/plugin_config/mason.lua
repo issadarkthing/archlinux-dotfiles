@@ -50,3 +50,4 @@ require('typescript-tools').setup {
 -- }
 
 lspconfig.prismals.setup{}
+lspconfig.eslint.setup{}

@@ -58,7 +58,7 @@ require('packer').startup(function(use)
 
     -- typescript/javascript formatter
     use { 
-        'prettier/vim-prettier', 
+        'issadarkthing/vim-prettier', 
         opt = true, ft = {'typescript', 'typescriptreact'},
         run = {'yarn install'},
     }

@@ -85,6 +85,11 @@ _G.packer_plugins = {
     path = "/home/terra/.local/share/nvim/site/pack/packer/start/lazygit.nvim",
     url = "https://github.com/kdheepak/lazygit.nvim"
   },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/home/terra/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
   ["mason-lspconfig.nvim"] = {
     config = { "\27LJ\2\n3\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\24plugin_config.mason\frequire\0" },
     loaded = true,
@@ -97,7 +102,7 @@ _G.packer_plugins = {
     url = "https://github.com/williamboman/mason.nvim"
   },
   ["nvim-autopairs"] = {
-    config = { "\27LJ\2\n<\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0" },
+    config = { "\27LJ\2\n<\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0!plugin_config.nvim-autopairs\frequire\0" },
     loaded = true,
     path = "/home/terra/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
     url = "https://github.com/windwp/nvim-autopairs"
@@ -106,6 +111,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/terra/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-web-devicons"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/terra/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons",
+    url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -133,11 +144,6 @@ _G.packer_plugins = {
     path = "/home/terra/.local/share/nvim/site/pack/packer/start/typescript-tools.nvim",
     url = "https://github.com/pmizio/typescript-tools.nvim"
   },
-  ["vim-airline"] = {
-    loaded = true,
-    path = "/home/terra/.local/share/nvim/site/pack/packer/start/vim-airline",
-    url = "https://github.com/vim-airline/vim-airline"
-  },
   ["vim-commentary"] = {
     loaded = true,
     path = "/home/terra/.local/share/nvim/site/pack/packer/start/vim-commentary",
@@ -153,17 +159,12 @@ _G.packer_plugins = {
     needs_bufread = true,
     only_cond = false,
     path = "/home/terra/.local/share/nvim/site/pack/packer/opt/vim-prettier",
-    url = "https://github.com/prettier/vim-prettier"
+    url = "https://github.com/issadarkthing/vim-prettier"
   },
   ["vim-ragtag"] = {
     loaded = true,
     path = "/home/terra/.local/share/nvim/site/pack/packer/start/vim-ragtag",
     url = "https://github.com/tpope/vim-ragtag"
-  },
-  ["vim-rex"] = {
-    loaded = true,
-    path = "/home/terra/.local/share/nvim/site/pack/packer/start/vim-rex",
-    url = "https://github.com/issadarkthing/vim-rex"
   },
   ["vim-surround"] = {
     loaded = true,
@@ -174,32 +175,37 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/terra/.local/share/nvim/site/pack/packer/start/vimwiki",
     url = "https://github.com/vimwiki/vimwiki"
+  },
+  ["vscode.nvim"] = {
+    loaded = true,
+    path = "/home/terra/.local/share/nvim/site/pack/packer/start/vscode.nvim",
+    url = "https://github.com/Mofiqul/vscode.nvim"
   }
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: lazygit.nvim
-time([[Config for lazygit.nvim]], true)
-try_loadstring("\27LJ\2\n5\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\26plugin_config.lazygit\frequire\0", "config", "lazygit.nvim")
-time([[Config for lazygit.nvim]], false)
--- Config for: telescope.nvim
-time([[Config for telescope.nvim]], true)
-try_loadstring("\27LJ\2\n7\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\28plugin_config.telescope\frequire\0", "config", "telescope.nvim")
-time([[Config for telescope.nvim]], false)
 -- Config for: nvim-autopairs
 time([[Config for nvim-autopairs]], true)
-try_loadstring("\27LJ\2\n<\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
+try_loadstring("\27LJ\2\n<\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0!plugin_config.nvim-autopairs\frequire\0", "config", "nvim-autopairs")
 time([[Config for nvim-autopairs]], false)
 -- Config for: mason-lspconfig.nvim
 time([[Config for mason-lspconfig.nvim]], true)
 try_loadstring("\27LJ\2\n3\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\24plugin_config.mason\frequire\0", "config", "mason-lspconfig.nvim")
 time([[Config for mason-lspconfig.nvim]], false)
+-- Config for: telescope.nvim
+time([[Config for telescope.nvim]], true)
+try_loadstring("\27LJ\2\n7\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\28plugin_config.telescope\frequire\0", "config", "telescope.nvim")
+time([[Config for telescope.nvim]], false)
+-- Config for: lazygit.nvim
+time([[Config for lazygit.nvim]], true)
+try_loadstring("\27LJ\2\n5\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\26plugin_config.lazygit\frequire\0", "config", "lazygit.nvim")
+time([[Config for lazygit.nvim]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
 time([[Defining lazy-load filetype autocommands]], true)
-vim.cmd [[au FileType typescript ++once lua require("packer.load")({'vim-prettier'}, { ft = "typescript" }, _G.packer_plugins)]]
 vim.cmd [[au FileType typescriptreact ++once lua require("packer.load")({'vim-prettier'}, { ft = "typescriptreact" }, _G.packer_plugins)]]
+vim.cmd [[au FileType typescript ++once lua require("packer.load")({'vim-prettier'}, { ft = "typescript" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
 vim.cmd("augroup END")
 vim.cmd [[augroup filetypedetect]]

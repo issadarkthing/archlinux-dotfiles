@@ -49,5 +49,9 @@ require('typescript-tools').setup {
 --   on_attach = on_attach
 -- }
 
+lspconfig.spectral.setup{}
 lspconfig.prismals.setup{}
+lspconfig.gopls.setup{
+    on_attach = on_attach
+}
 lspconfig.eslint.setup{}

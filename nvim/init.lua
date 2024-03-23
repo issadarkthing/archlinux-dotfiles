@@ -23,7 +23,6 @@ require('packer').startup(function(use)
 		branch = 'coq',
 	}
 
-
     -- surround stuff based on filetype
     use 'tpope/vim-surround'
 
@@ -51,9 +50,11 @@ require('packer').startup(function(use)
     }
 
     -- auto pair
-    use { 
+    use {
         'windwp/nvim-autopairs',
-        config = function() require("nvim-autopairs").setup() end
+        config = function() 
+            require("plugin_config.nvim-autopairs")
+        end
     }
 
     -- typescript/javascript formatter
@@ -80,17 +81,22 @@ require('packer').startup(function(use)
 
     -- status line
     use {
-      'nvim-lualine/lualine.nvim',
-      requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
 end)
+            
 
-require('tsc').setup{}
+require('tsc').setup{
+    auto_open_qflist = false
+}
 
 require('vscode').setup{
     transparent = true,
     italic_comments = true
 }
+
+require('vscode').load()
 
 local vscode_theme = require('lualine.themes.vscode')
 
@@ -106,7 +112,6 @@ require('lualine').setup{
     }
 }
 
-require('vscode').load()
 
 vim.g.mapleader = ","
 

@@ -263,7 +263,6 @@ myManageHook = composeAll
     , resource =? "kdesktop"        --> doIgnore
     , className =? "Sxiv"           --> doCenterFloat
     , className =? "brave"          --> doShift "1"
-    , className =? "discord"        --> doShift "4"
     , className =? "Thunderbird"    --> doShift "5"
     ]
 
@@ -302,7 +301,6 @@ myStartupHook = do
     spawnOnce "dunst &"
     spawnOnce $ scripts ++ "battery_low_warn &"
     spawnOn "5" "pgrep thunderbird || thunderbird"
-    spawnOn "4" "pgrep Discord || discord"
     spawnOn "1" "pgrep brave || brave"
 
 ------------------------------------------------------------------------
